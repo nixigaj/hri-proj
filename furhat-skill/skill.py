@@ -46,8 +46,9 @@ def main():
 
     try:
         furhat = FurhatRemoteAPI("localhost")
+        furhat.furhat_get()  # probe: raises if Launcher is not reachable
     except Exception as e:
-        print(f"Could not connect to Furhat on localhost:8080: {e}")
+        print(f"Could not connect to Furhat on localhost:54321: {e}")
         print("Start the Furhat Launcher before running this skill.")
         sys.exit(1)
 

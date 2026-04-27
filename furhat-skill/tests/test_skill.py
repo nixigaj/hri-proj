@@ -9,7 +9,8 @@ def _create_audio_files(tmpdir, scenario_id, voice):
     subdir = os.path.join(tmpdir, f"S{scenario_id}", voice)
     os.makedirs(subdir, exist_ok=True)
     for t in turns:
-        open(os.path.join(subdir, f"{t}.wav"), "w").close()
+        with open(os.path.join(subdir, f"{t}.wav"), "w"):
+            pass
 
 
 def test_preflight_passes_when_all_files_present():
