@@ -28,8 +28,10 @@ def run_scenario(
                     fx_url = audio_url(audio_base_url, scenario_id, voice, "FX")
                     furhat.say(url=fx_url, blocking=True)
                     furhat.say(url=url, blocking=True)
-                else:
+                elif cmd == "":
                     break
+                else:
+                    print("  [Enter=advance, r=repeat]")
         else:
             sleep_fn(1.5)
 

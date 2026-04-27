@@ -48,8 +48,8 @@ def main():
         furhat = FurhatRemoteAPI("localhost")
         furhat.furhat_get()  # probe: raises if Launcher is not reachable
     except Exception as e:
-        print(f"Could not connect to Furhat on localhost:54321: {e}")
-        print("Start the Furhat Launcher before running this skill.")
+        print(f"Could not connect to Furhat Launcher: {e}")
+        print("Ensure the Furhat Launcher is running and the virtual robot is started.")
         sys.exit(1)
 
     run_scenario(args.scenario, args.voice, furhat, audio_base_url)

@@ -81,3 +81,14 @@ def test_scenario_2_uses_correct_scenario_id_in_url():
                  sleep_fn=lambda _: None)
     called_urls = [c.kwargs["url"] for c in mock_furhat.say.call_args_list]
     assert all("/S2/" in url for url in called_urls)
+
+
+def test_unknown_command_does_not_advance():
+    mock_furhat = Mock()
+    # junk input on F1, then Enter — should not advance on junk
+    run_scenario(1, "tts", mock_furhat, BASE_URL,
+                 input_fn=_make_inputs("junk", "", "", "", ""),
+                 sleep_fn=lambda _: None)
+    # F1 played once (no replay), junk ignored, then Enter advances
+    # Total: F1-F6 = 6 calls (no FX, no replay)
+    assert mock_furhat.say.call_count == 6
