@@ -1,4 +1,3 @@
-import pytest
 from scenarios import audio_url, SCENARIOS, VALID_VOICES, VALID_SCENARIOS
 
 

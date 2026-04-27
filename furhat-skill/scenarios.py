@@ -1,6 +1,11 @@
+"""Scenario data and audio URL helper for the Furhat HRI study skill."""
+
 VALID_VOICES = {"tts", "rikssvenska", "skånska"}
 VALID_SCENARIOS = {1, 2, 3}
 
+# turns: ordered list (playback order matters).
+# menu_turns: set (only membership lookup needed; order is irrelevant).
+# Validation of scenario_id and voice is the responsibility of skill.py's CLI layer.
 SCENARIOS = {
     1: {
         "title": "Retur",
