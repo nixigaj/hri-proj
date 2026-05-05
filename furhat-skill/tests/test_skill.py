@@ -36,7 +36,7 @@ def test_preflight_reports_missing_files(capsys):
 
 def test_preflight_fails_when_one_file_missing(capsys):
     with tempfile.TemporaryDirectory() as tmpdir:
-        _create_audio_files(tmpdir, 3, "skånska")
-        os.remove(os.path.join(tmpdir, "S3", "skånska", "FX.wav"))
+        _create_audio_files(tmpdir, 3, "skanska")
+        os.remove(os.path.join(tmpdir, "S3", "skanska", "FX.wav"))
         with pytest.raises(SystemExit):
-            preflight_check(3, "skånska", tmpdir)
+            preflight_check(3, "skanska", tmpdir)

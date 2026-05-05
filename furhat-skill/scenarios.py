@@ -1,6 +1,6 @@
 """Scenario data and audio URL helper for the Furhat HRI study skill."""
 
-VALID_VOICES = {"tts", "rikssvenska", "skånska"}
+VALID_VOICES = {"tts", "rikssvenska", "skanska"}
 VALID_SCENARIOS = {1, 2, 3}
 
 # turns: ordered list (playback order matters).

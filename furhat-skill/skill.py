@@ -14,7 +14,7 @@ def parse_args():
     parser.add_argument("--scenario", type=int, required=True, choices=[1, 2, 3],
                         help="Scenario number (1=Retur, 2=Orderfråga, 3=Reklamation)")
     parser.add_argument("--voice", type=str, required=True,
-                        choices=["tts", "rikssvenska", "skånska"],
+                        choices=["tts", "rikssvenska", "skanska"],
                         help="Voice condition")
     return parser.parse_args()
 
@@ -46,13 +46,13 @@ def main():
 
     try:
         furhat = FurhatRemoteAPI("localhost")
-        furhat.furhat_get()  # probe: raises if Launcher is not reachable
+        furhat.furhat_get()  # probe: raises if Remote API not reachable (port 54321)
     except Exception as e:
         print(f"Could not connect to Furhat Launcher: {e}")
         print("Ensure the Furhat Launcher is running and the virtual robot is started.")
         sys.exit(1)
 
-    run_scenario(args.scenario, args.voice, furhat, audio_base_url)
+    run_scenario(args.scenario, args.voice, furhat, audio_base_url, audio_dir)
 
 
 if __name__ == "__main__":

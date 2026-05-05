@@ -39,7 +39,7 @@ def test_f4_and_f6_are_not_menu_turns():
 
 
 def test_valid_voices_contains_all_three():
-    assert VALID_VOICES == {"tts", "rikssvenska", "skånska"}
+    assert VALID_VOICES == {"tts", "rikssvenska", "skanska"}
 
 
 def test_valid_scenarios_contains_all_three():

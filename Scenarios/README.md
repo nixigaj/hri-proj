@@ -36,7 +36,6 @@ F1, F5 och F6 är ordagrant identiska över scenarier (endast huvudmenyns altern
 ## Konventioner
 
 - **Ordernummer uttalas siffra för siffra** (t.ex. `4827` → "fyra åtta två sju") — viktigt för konsistens mellan ElevenLabs-rösterna och TTS-baseline.
-- **Furhats persona:** artig, effektiv, neutral. Ingen humor, ingen påklistrad personlighet, ingen försök till "mänsklig värme". UCD-intervjuerna pekar tydligt på att deltagarna ogillar bot-försök till intimitet.
 - **Inga scenariospecifika tonalitetskvirks.** Om något hörs som "skämtsamt" i ett scenario men "formellt" i ett annat — normalisera.
 
 ## Inspelnings-IDs
