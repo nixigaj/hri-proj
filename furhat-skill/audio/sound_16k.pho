@@ -1,0 +1,452 @@
+[
+  {
+    "phoneme": "D",
+    "start": 0,
+    "duration": 98
+  },
+  {
+    "phoneme": "@",
+    "start": 98,
+    "duration": 98
+  },
+  {
+    "phoneme": "f",
+    "start": 195,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 293,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 391,
+    "duration": 98
+  },
+  {
+    "phoneme": "n",
+    "start": 488,
+    "duration": 98
+  },
+  {
+    "phoneme": "I2",
+    "start": 586,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 684,
+    "duration": 98
+  },
+  {
+    "phoneme": "g",
+    "start": 781,
+    "duration": 98
+  },
+  {
+    "phoneme": "r",
+    "start": 879,
+    "duration": 98
+  },
+  {
+    "phoneme": "a",
+    "start": 977,
+    "duration": 98
+  },
+  {
+    "phoneme": "m",
+    "start": 1074,
+    "duration": 98
+  },
+  {
+    "phoneme": "p",
+    "start": 1172,
+    "duration": 98
+  },
+  {
+    "phoneme": "eI",
+    "start": 1269,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 1367,
+    "duration": 98
+  },
+  {
+    "phoneme": "3",
+    "start": 1465,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 1562,
+    "duration": 98
+  },
+  {
+    "phoneme": "E",
+    "start": 1660,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 1758,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 1855,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 1953,
+    "duration": 98
+  },
+  {
+    "phoneme": "z",
+    "start": 2051,
+    "duration": 98
+  },
+  {
+    "phoneme": "a#",
+    "start": 2148,
+    "duration": 98
+  },
+  {
+    "phoneme": "m",
+    "start": 2246,
+    "duration": 98
+  },
+  {
+    "phoneme": "V",
+    "start": 2344,
+    "duration": 98
+  },
+  {
+    "phoneme": "l",
+    "start": 2441,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 2539,
+    "duration": 98
+  },
+  {
+    "phoneme": "i",
+    "start": 2637,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 2734,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 2832,
+    "duration": 98
+  },
+  {
+    "phoneme": "eI",
+    "start": 2930,
+    "duration": 98
+  },
+  {
+    "phoneme": "dZ",
+    "start": 3027,
+    "duration": 98
+  },
+  {
+    "phoneme": "e@",
+    "start": 3125,
+    "duration": 98
+  },
+  {
+    "phoneme": "r",
+    "start": 3223,
+    "duration": 98
+  },
+  {
+    "phoneme": "oU",
+    "start": 3320,
+    "duration": 98
+  },
+  {
+    "phoneme": "b",
+    "start": 3418,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 3516,
+    "duration": 98
+  },
+  {
+    "phoneme": "k",
+    "start": 3613,
+    "duration": 98
+  },
+  {
+    "phoneme": "k",
+    "start": 3711,
+    "duration": 98
+  },
+  {
+    "phoneme": "@",
+    "start": 3808,
+    "duration": 98
+  },
+  {
+    "phoneme": "p",
+    "start": 3906,
+    "duration": 98
+  },
+  {
+    "phoneme": "a",
+    "start": 4004,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 4101,
+    "duration": 98
+  },
+  {
+    "phoneme": "I2",
+    "start": 4199,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 4297,
+    "duration": 98
+  },
+  {
+    "phoneme": "i",
+    "start": 4394,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 4492,
+    "duration": 98
+  },
+  {
+    "phoneme": "E",
+    "start": 4590,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 4687,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 4785,
+    "duration": 98
+  },
+  {
+    "phoneme": "D",
+    "start": 4883,
+    "duration": 98
+  },
+  {
+    "phoneme": "a",
+    "start": 4980,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 5078,
+    "duration": 98
+  },
+  {
+    "phoneme": "p",
+    "start": 5176,
+    "duration": 98
+  },
+  {
+    "phoneme": "r",
+    "start": 5273,
+    "duration": 98
+  },
+  {
+    "phoneme": "@",
+    "start": 5371,
+    "duration": 98
+  },
+  {
+    "phoneme": "g",
+    "start": 5469,
+    "duration": 98
+  },
+  {
+    "phoneme": "r",
+    "start": 5566,
+    "duration": 98
+  },
+  {
+    "phoneme": "E",
+    "start": 5664,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 5762,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 5859,
+    "duration": 98
+  },
+  {
+    "phoneme": "v",
+    "start": 5957,
+    "duration": 98
+  },
+  {
+    "phoneme": "l",
+    "start": 6054,
+    "duration": 98
+  },
+  {
+    "phoneme": "i",
+    "start": 6152,
+    "duration": 98
+  },
+  {
+    "phoneme": "g",
+    "start": 6250,
+    "duration": 98
+  },
+  {
+    "phoneme": "E",
+    "start": 6347,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 6445,
+    "duration": 98
+  },
+  {
+    "phoneme": "s",
+    "start": 6543,
+    "duration": 98
+  },
+  {
+    "phoneme": "m",
+    "start": 6640,
+    "duration": 98
+  },
+  {
+    "phoneme": "o@",
+    "start": 6738,
+    "duration": 98
+  },
+  {
+    "phoneme": "d",
+    "start": 6836,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 6933,
+    "duration": 98
+  },
+  {
+    "phoneme": "f",
+    "start": 7031,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 7129,
+    "duration": 98
+  },
+  {
+    "phoneme": "k",
+    "start": 7226,
+    "duration": 98
+  },
+  {
+    "phoneme": "@L",
+    "start": 7324,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 7422,
+    "duration": 98
+  },
+  {
+    "phoneme": "a",
+    "start": 7519,
+    "duration": 98
+  },
+  {
+    "phoneme": "z",
+    "start": 7617,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 7715,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 7812,
+    "duration": 98
+  },
+  {
+    "phoneme": "k",
+    "start": 7910,
+    "duration": 98
+  },
+  {
+    "phoneme": "@",
+    "start": 8008,
+    "duration": 98
+  },
+  {
+    "phoneme": "n",
+    "start": 8105,
+    "duration": 98
+  },
+  {
+    "phoneme": "t",
+    "start": 8203,
+    "duration": 98
+  },
+  {
+    "phoneme": "I",
+    "start": 8300,
+    "duration": 98
+  },
+  {
+    "phoneme": "n",
+    "start": 8398,
+    "duration": 98
+  },
+  {
+    "phoneme": "j",
+    "start": 8496,
+    "duration": 98
+  },
+  {
+    "phoneme": "u:",
+    "start": 8593,
+    "duration": 98
+  },
+  {
+    "phoneme": "z",
+    "start": 8691,
+    "duration": 98
+  }
+]
