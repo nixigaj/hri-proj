@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from audio_server import start_audio_server
 from furhat_remote_api import FurhatRemoteAPI
+from lipsync_driver import LipsyncPlayer
 
 SCRIPT_DIR = Path(__file__).parent
 AUDIO_DIR = SCRIPT_DIR / "audio"
@@ -25,9 +26,12 @@ def main():
         sys.exit("sound_16k.pho not found — run make_test_pho.py first")
 
     base_url = start_audio_server(str(AUDIO_DIR), port=8000)
-    wav_url = f"{base_url}/sound_16k.wav"
+    # Cache-bust so Furhat can't reuse a previous fetch
+    import time as _t
+    cb = int(_t.time())
+    wav_url = f"{base_url}/sound_16k.wav?cb={cb}"
     print(f"Serving: {wav_url}")
-    print(f"Furhat will fetch .pho from: {base_url}/sound_16k.pho")
+    print(f"Furhat will fetch .pho from: {base_url}/sound_16k.pho?cb={cb}")
 
     try:
         furhat = FurhatRemoteAPI("localhost")
@@ -42,6 +46,14 @@ def main():
     except Exception as e:
         print(f"Could not get voices: {e}")
 
+    # Polly *-generative voices have no speech marks → no lipsync.
+    # Force a Neural voice (which does emit visemes).
+    try:
+        furhat.set_voice(name="Isabelle-Neural")
+        print("Voice set: Isabelle-Neural")
+    except Exception as e:
+        print(f"set_voice failed: {e}")
+
     # Test 0: gesture — does anything move at all?
     print("\n[Test 0] Gesture — does anything move?")
     furhat.attend(user="CLOSEST")
@@ -53,10 +65,13 @@ def main():
     furhat.say(text="Hej, jag testar nu om munrörelserna fungerar.", blocking=True)
     input("Press Enter to continue to audio test...")
 
-    # Test 2: URL audio — check server log below for .pho fetch
-    print("\n[Test 2] Audio URL lip sync — watch server log for .pho request")
-    furhat.say(url=wav_url, blocking=True)
-    print("Done. Check above: did the server log show a GET for sound_16k.pho?")
+    # Test 2: URL audio + manual lipsync driver
+    print("\n[Test 2] URL audio with manual lipsync driver — mouth should move with audio")
+    player = LipsyncPlayer(AUDIO_DIR / "sound_16k.pho")
+    furhat.say(url=wav_url, lipsync=True, blocking=False)
+    player.start()
+    player.join(timeout=15)
+    print("Done.")
 
 
 if __name__ == "__main__":

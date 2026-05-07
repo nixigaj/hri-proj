@@ -24,9 +24,9 @@ TRANSCRIPT = (
 )
 
 
-def wav_duration_ms(path: Path) -> float:
+def wav_duration_s(path: Path) -> float:
     with contextlib.closing(wave.open(str(path), "r")) as f:
-        return f.getnframes() / f.getframerate() * 1000
+        return f.getnframes() / f.getframerate()
 
 
 def get_phonemes(text: str) -> list[str]:
@@ -44,27 +44,41 @@ def get_phonemes(text: str) -> list[str]:
     return tokens
 
 
-def make_pho(phonemes: list[str], total_ms: float) -> list[dict]:
+def make_pho(phonemes: list[str], total_s: float) -> dict:
+    """Build Furhat iristk.speech.Transcription with even-spaced phones."""
     if not phonemes:
-        return []
-    dur = total_ms / len(phonemes)
-    return [
-        {"phoneme": p, "start": round(i * dur), "duration": round(dur)}
+        return {"class": "iristk.speech.Transcription", "phones": []}
+    dur = total_s / len(phonemes)
+    phones = [
+        {
+            "class": "iristk.speech.Phone",
+            "name": p,
+            "start": round(i * dur, 3),
+            "end": round((i + 1) * dur, 3),
+        }
         for i, p in enumerate(phonemes)
     ]
+    # Trailing silence so mouth closes
+    phones.append({
+        "class": "iristk.speech.Phone",
+        "name": "_s",
+        "start": phones[-1]["end"],
+        "end": round(phones[-1]["end"] + 0.01, 3),
+    })
+    return {"class": "iristk.speech.Transcription", "phones": phones}
 
 
 def main() -> None:
     if not WAV_PATH.exists():
         raise FileNotFoundError(f"{WAV_PATH} not found")
 
-    duration_ms = wav_duration_ms(WAV_PATH)
-    print(f"Audio duration: {duration_ms:.0f} ms")
+    duration_s = wav_duration_s(WAV_PATH)
+    print(f"Audio duration: {duration_s:.2f} s")
 
     phonemes = get_phonemes(TRANSCRIPT)
     print(f"Phonemes ({len(phonemes)}): {' '.join(phonemes[:10])}...")
 
-    pho = make_pho(phonemes, duration_ms)
+    pho = make_pho(phonemes, duration_s)
     PHO_PATH.write_text(json.dumps(pho, indent=2), encoding="utf-8")
     print(f"Written: {PHO_PATH}")
     print("\nTo test: start audio server and load sound_16k.wav in Furhat.")

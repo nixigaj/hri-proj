@@ -1,452 +1,551 @@
-[
-  {
-    "phoneme": "D",
-    "start": 0,
-    "duration": 98
-  },
-  {
-    "phoneme": "@",
-    "start": 98,
-    "duration": 98
-  },
-  {
-    "phoneme": "f",
-    "start": 195,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 293,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 391,
-    "duration": 98
-  },
-  {
-    "phoneme": "n",
-    "start": 488,
-    "duration": 98
-  },
-  {
-    "phoneme": "I2",
-    "start": 586,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 684,
-    "duration": 98
-  },
-  {
-    "phoneme": "g",
-    "start": 781,
-    "duration": 98
-  },
-  {
-    "phoneme": "r",
-    "start": 879,
-    "duration": 98
-  },
-  {
-    "phoneme": "a",
-    "start": 977,
-    "duration": 98
-  },
-  {
-    "phoneme": "m",
-    "start": 1074,
-    "duration": 98
-  },
-  {
-    "phoneme": "p",
-    "start": 1172,
-    "duration": 98
-  },
-  {
-    "phoneme": "eI",
-    "start": 1269,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 1367,
-    "duration": 98
-  },
-  {
-    "phoneme": "3",
-    "start": 1465,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 1562,
-    "duration": 98
-  },
-  {
-    "phoneme": "E",
-    "start": 1660,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 1758,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 1855,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 1953,
-    "duration": 98
-  },
-  {
-    "phoneme": "z",
-    "start": 2051,
-    "duration": 98
-  },
-  {
-    "phoneme": "a#",
-    "start": 2148,
-    "duration": 98
-  },
-  {
-    "phoneme": "m",
-    "start": 2246,
-    "duration": 98
-  },
-  {
-    "phoneme": "V",
-    "start": 2344,
-    "duration": 98
-  },
-  {
-    "phoneme": "l",
-    "start": 2441,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 2539,
-    "duration": 98
-  },
-  {
-    "phoneme": "i",
-    "start": 2637,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 2734,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 2832,
-    "duration": 98
-  },
-  {
-    "phoneme": "eI",
-    "start": 2930,
-    "duration": 98
-  },
-  {
-    "phoneme": "dZ",
-    "start": 3027,
-    "duration": 98
-  },
-  {
-    "phoneme": "e@",
-    "start": 3125,
-    "duration": 98
-  },
-  {
-    "phoneme": "r",
-    "start": 3223,
-    "duration": 98
-  },
-  {
-    "phoneme": "oU",
-    "start": 3320,
-    "duration": 98
-  },
-  {
-    "phoneme": "b",
-    "start": 3418,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 3516,
-    "duration": 98
-  },
-  {
-    "phoneme": "k",
-    "start": 3613,
-    "duration": 98
-  },
-  {
-    "phoneme": "k",
-    "start": 3711,
-    "duration": 98
-  },
-  {
-    "phoneme": "@",
-    "start": 3808,
-    "duration": 98
-  },
-  {
-    "phoneme": "p",
-    "start": 3906,
-    "duration": 98
-  },
-  {
-    "phoneme": "a",
-    "start": 4004,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 4101,
-    "duration": 98
-  },
-  {
-    "phoneme": "I2",
-    "start": 4199,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 4297,
-    "duration": 98
-  },
-  {
-    "phoneme": "i",
-    "start": 4394,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 4492,
-    "duration": 98
-  },
-  {
-    "phoneme": "E",
-    "start": 4590,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 4687,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 4785,
-    "duration": 98
-  },
-  {
-    "phoneme": "D",
-    "start": 4883,
-    "duration": 98
-  },
-  {
-    "phoneme": "a",
-    "start": 4980,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 5078,
-    "duration": 98
-  },
-  {
-    "phoneme": "p",
-    "start": 5176,
-    "duration": 98
-  },
-  {
-    "phoneme": "r",
-    "start": 5273,
-    "duration": 98
-  },
-  {
-    "phoneme": "@",
-    "start": 5371,
-    "duration": 98
-  },
-  {
-    "phoneme": "g",
-    "start": 5469,
-    "duration": 98
-  },
-  {
-    "phoneme": "r",
-    "start": 5566,
-    "duration": 98
-  },
-  {
-    "phoneme": "E",
-    "start": 5664,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 5762,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 5859,
-    "duration": 98
-  },
-  {
-    "phoneme": "v",
-    "start": 5957,
-    "duration": 98
-  },
-  {
-    "phoneme": "l",
-    "start": 6054,
-    "duration": 98
-  },
-  {
-    "phoneme": "i",
-    "start": 6152,
-    "duration": 98
-  },
-  {
-    "phoneme": "g",
-    "start": 6250,
-    "duration": 98
-  },
-  {
-    "phoneme": "E",
-    "start": 6347,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 6445,
-    "duration": 98
-  },
-  {
-    "phoneme": "s",
-    "start": 6543,
-    "duration": 98
-  },
-  {
-    "phoneme": "m",
-    "start": 6640,
-    "duration": 98
-  },
-  {
-    "phoneme": "o@",
-    "start": 6738,
-    "duration": 98
-  },
-  {
-    "phoneme": "d",
-    "start": 6836,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 6933,
-    "duration": 98
-  },
-  {
-    "phoneme": "f",
-    "start": 7031,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 7129,
-    "duration": 98
-  },
-  {
-    "phoneme": "k",
-    "start": 7226,
-    "duration": 98
-  },
-  {
-    "phoneme": "@L",
-    "start": 7324,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 7422,
-    "duration": 98
-  },
-  {
-    "phoneme": "a",
-    "start": 7519,
-    "duration": 98
-  },
-  {
-    "phoneme": "z",
-    "start": 7617,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 7715,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 7812,
-    "duration": 98
-  },
-  {
-    "phoneme": "k",
-    "start": 7910,
-    "duration": 98
-  },
-  {
-    "phoneme": "@",
-    "start": 8008,
-    "duration": 98
-  },
-  {
-    "phoneme": "n",
-    "start": 8105,
-    "duration": 98
-  },
-  {
-    "phoneme": "t",
-    "start": 8203,
-    "duration": 98
-  },
-  {
-    "phoneme": "I",
-    "start": 8300,
-    "duration": 98
-  },
-  {
-    "phoneme": "n",
-    "start": 8398,
-    "duration": 98
-  },
-  {
-    "phoneme": "j",
-    "start": 8496,
-    "duration": 98
-  },
-  {
-    "phoneme": "u:",
-    "start": 8593,
-    "duration": 98
-  },
-  {
-    "phoneme": "z",
-    "start": 8691,
-    "duration": 98
-  }
-]
+{
+  "class": "iristk.speech.Transcription",
+  "phones": [
+    {
+      "class": "iristk.speech.Phone",
+      "name": "D",
+      "start": 0.0,
+      "end": 0.098
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "@",
+      "start": 0.098,
+      "end": 0.195
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "f",
+      "start": 0.195,
+      "end": 0.293
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 0.293,
+      "end": 0.391
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 0.391,
+      "end": 0.488
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n",
+      "start": 0.488,
+      "end": 0.586
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I2",
+      "start": 0.586,
+      "end": 0.684
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 0.684,
+      "end": 0.781
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "g",
+      "start": 0.781,
+      "end": 0.879
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 0.879,
+      "end": 0.977
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 0.977,
+      "end": 1.074
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "m",
+      "start": 1.074,
+      "end": 1.172
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "p",
+      "start": 1.172,
+      "end": 1.269
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "eI",
+      "start": 1.269,
+      "end": 1.367
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 1.367,
+      "end": 1.465
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "3",
+      "start": 1.465,
+      "end": 1.562
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 1.562,
+      "end": 1.66
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "E",
+      "start": 1.66,
+      "end": 1.758
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 1.758,
+      "end": 1.855
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 1.855,
+      "end": 1.953
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 1.953,
+      "end": 2.051
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "z",
+      "start": 2.051,
+      "end": 2.148
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a#",
+      "start": 2.148,
+      "end": 2.246
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "m",
+      "start": 2.246,
+      "end": 2.344
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "V",
+      "start": 2.344,
+      "end": 2.441
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l",
+      "start": 2.441,
+      "end": 2.539
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 2.539,
+      "end": 2.637
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "i",
+      "start": 2.637,
+      "end": 2.734
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 2.734,
+      "end": 2.832
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 2.832,
+      "end": 2.93
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "eI",
+      "start": 2.93,
+      "end": 3.027
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "dZ",
+      "start": 3.027,
+      "end": 3.125
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "e@",
+      "start": 3.125,
+      "end": 3.223
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 3.223,
+      "end": 3.32
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "oU",
+      "start": 3.32,
+      "end": 3.418
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "b",
+      "start": 3.418,
+      "end": 3.516
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 3.516,
+      "end": 3.613
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 3.613,
+      "end": 3.711
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 3.711,
+      "end": 3.808
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "@",
+      "start": 3.808,
+      "end": 3.906
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "p",
+      "start": 3.906,
+      "end": 4.004
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 4.004,
+      "end": 4.101
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 4.101,
+      "end": 4.199
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I2",
+      "start": 4.199,
+      "end": 4.297
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 4.297,
+      "end": 4.394
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "i",
+      "start": 4.394,
+      "end": 4.492
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 4.492,
+      "end": 4.59
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "E",
+      "start": 4.59,
+      "end": 4.687
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 4.687,
+      "end": 4.785
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 4.785,
+      "end": 4.883
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "D",
+      "start": 4.883,
+      "end": 4.98
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 4.98,
+      "end": 5.078
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 5.078,
+      "end": 5.176
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "p",
+      "start": 5.176,
+      "end": 5.273
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 5.273,
+      "end": 5.371
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "@",
+      "start": 5.371,
+      "end": 5.469
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "g",
+      "start": 5.469,
+      "end": 5.566
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 5.566,
+      "end": 5.664
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "E",
+      "start": 5.664,
+      "end": 5.762
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 5.762,
+      "end": 5.859
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 5.859,
+      "end": 5.957
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "v",
+      "start": 5.957,
+      "end": 6.054
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l",
+      "start": 6.054,
+      "end": 6.152
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "i",
+      "start": 6.152,
+      "end": 6.25
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "g",
+      "start": 6.25,
+      "end": 6.347
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "E",
+      "start": 6.347,
+      "end": 6.445
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 6.445,
+      "end": 6.543
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s",
+      "start": 6.543,
+      "end": 6.64
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "m",
+      "start": 6.64,
+      "end": 6.738
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "o@",
+      "start": 6.738,
+      "end": 6.836
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d",
+      "start": 6.836,
+      "end": 6.933
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 6.933,
+      "end": 7.031
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "f",
+      "start": 7.031,
+      "end": 7.129
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 7.129,
+      "end": 7.226
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 7.226,
+      "end": 7.324
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "@L",
+      "start": 7.324,
+      "end": 7.422
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 7.422,
+      "end": 7.519
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 7.519,
+      "end": 7.617
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "z",
+      "start": 7.617,
+      "end": 7.715
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 7.715,
+      "end": 7.812
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 7.812,
+      "end": 7.91
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 7.91,
+      "end": 8.008
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "@",
+      "start": 8.008,
+      "end": 8.105
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n",
+      "start": 8.105,
+      "end": 8.203
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t",
+      "start": 8.203,
+      "end": 8.3
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "I",
+      "start": 8.3,
+      "end": 8.398
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n",
+      "start": 8.398,
+      "end": 8.496
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "j",
+      "start": 8.496,
+      "end": 8.593
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "u:",
+      "start": 8.593,
+      "end": 8.691
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "z",
+      "start": 8.691,
+      "end": 8.789
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 8.789,
+      "end": 8.799
+    }
+  ]
+}

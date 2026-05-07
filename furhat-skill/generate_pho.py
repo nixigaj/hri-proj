@@ -123,28 +123,39 @@ def run_mfa(corpus_dir: Path, output_dir: Path) -> None:
 
 
 def parse_phones_tier(tg_text: str) -> list[dict]:
-    """Extract phoneme intervals from a TextGrid file string."""
-    # Locate the phones IntervalTier
+    """Extract phoneme intervals from TextGrid as Furhat iristk.speech.Phone records.
+
+    Furhat .pho format: start/end in seconds, silence labelled "_s".
+    """
     m = re.search(r'name = "phones"\s+intervals: size = \d+(.*?)(?=item \[|\Z)', tg_text, re.DOTALL)
     if not m:
         raise ValueError("No 'phones' tier found in TextGrid")
 
-    phonemes = []
+    phones = []
     for interval in re.finditer(
         r'xmin = ([\d.]+)\s+xmax = ([\d.]+)\s+text = "([^"]*)"',
         m.group(1),
     ):
         xmin = float(interval.group(1))
         xmax = float(interval.group(2))
-        label = interval.group(3).strip()
-        duration_ms = round((xmax - xmin) * 1000)
-        if duration_ms > 0:
-            phonemes.append({
-                "phoneme": label or "sil",
-                "start": round(xmin * 1000),
-                "duration": duration_ms,
-            })
-    return phonemes
+        if xmax <= xmin:
+            continue
+        label = interval.group(3).strip() or "_s"
+        phones.append({
+            "class": "iristk.speech.Phone",
+            "name": label,
+            "start": round(xmin, 3),
+            "end": round(xmax, 3),
+        })
+    # Ensure trailing silence so mouth closes
+    if phones and phones[-1]["name"] != "_s":
+        phones.append({
+            "class": "iristk.speech.Phone",
+            "name": "_s",
+            "start": phones[-1]["end"],
+            "end": round(phones[-1]["end"] + 0.01, 3),
+        })
+    return phones
 
 
 def convert_textgrids(output_dir: Path) -> None:
@@ -163,14 +174,18 @@ def convert_textgrids(output_dir: Path) -> None:
 
             tg_text = tg_path.read_text(encoding="utf-8")
             try:
-                phonemes = parse_phones_tier(tg_text)
+                phones = parse_phones_tier(tg_text)
             except ValueError as e:
                 print(f"  [error] {tg_path.name}: {e}")
                 continue
 
+            transcription = {
+                "class": "iristk.speech.Transcription",
+                "phones": phones,
+            }
             pho_path = AUDIO_DIR / f"S{scenario_id}" / voice / f"{turn_id}.pho"
-            pho_path.write_text(json.dumps(phonemes, ensure_ascii=False, indent=2), encoding="utf-8")
-            print(f"  {pho_path.relative_to(SCRIPT_DIR)}  ({len(phonemes)} phonemes)")
+            pho_path.write_text(json.dumps(transcription, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"  {pho_path.relative_to(SCRIPT_DIR)}  ({len(phones)} phonemes)")
 
 
 def main() -> None:

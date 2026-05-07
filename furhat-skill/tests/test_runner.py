@@ -71,13 +71,15 @@ def test_non_menu_turns_trigger_sleep_not_input(mock_dur):
 
 
 @patch("runner._wav_duration", return_value=0.0)
-def test_say_called_with_blocking_true(mock_dur):
+def test_say_called_non_blocking_with_lipsync(mock_dur):
+    """We drive timing+lipsync ourselves, so say() must not block."""
     mock_furhat = Mock()
     run_scenario(1, "tts", mock_furhat, BASE_URL, AUDIO_DIR,
                  input_fn=_make_inputs("", "", "", ""),
                  sleep_fn=lambda _: None)
     for c in mock_furhat.say.call_args_list:
-        assert c.kwargs.get("blocking") is True
+        assert c.kwargs.get("blocking") is False
+        assert c.kwargs.get("lipsync") is True
 
 
 @patch("runner._wav_duration", return_value=0.0)

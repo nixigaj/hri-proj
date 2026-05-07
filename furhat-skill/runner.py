@@ -3,6 +3,7 @@ import os
 import time
 import wave
 
+from lipsync_driver import LipsyncPlayer
 from scenarios import SCENARIOS, audio_url
 
 
@@ -12,14 +13,20 @@ def _wav_duration(path: str) -> float:
 
 
 def _say_blocking(furhat, url: str, wav_path: str, sleep_fn) -> None:
-    """Play url; if Furhat's blocking=True returns before audio finishes, sleep the gap."""
+    """Play url; drive lipsync from .pho if present (virtual Furhat ignores lipsync flag)."""
     duration = _wav_duration(wav_path)
+    pho_path = os.path.splitext(wav_path)[0] + ".pho"
+
+    player = LipsyncPlayer(pho_path) if os.path.exists(pho_path) else None
     t0 = time.monotonic()
-    furhat.say(url=url, blocking=True)
-    elapsed = time.monotonic() - t0
-    gap = duration - elapsed - 0.3  # 0.3 s tolerance for network latency
+    furhat.say(url=url, lipsync=True, blocking=False)
+    if player:
+        player.start()
+    gap = duration - (time.monotonic() - t0)
     if gap > 0:
         sleep_fn(gap)
+    if player:
+        player.join(timeout=1.0)
 
 
 def run_scenario(
