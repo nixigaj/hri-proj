@@ -39,20 +39,21 @@ def main():
     except Exception as e:
         sys.exit(f"Cannot connect to Furhat: {e}")
 
-    # Print what face/voices are available
+    # Pick first available voice. Prefer Neural (emits visemes for lipsync);
+    # *-generative voices have no speech marks.
     try:
         voices = furhat.get_voices()
-        print(f"Available voices: {[v.name for v in voices[:5]]}")
+        if not voices:
+            sys.exit("No voices available on Furhat. Enable one in Launcher → Settings → Voices.")
+        print(f"Available voices: {[v.name for v in voices[:10]]}")
+        neural = [v for v in voices if "Neural" in v.name]
+        chosen = (neural or voices)[0].name
+        furhat.set_voice(name=chosen)
+        print(f"Voice set: {chosen}")
+    except SystemExit:
+        raise
     except Exception as e:
-        print(f"Could not get voices: {e}")
-
-    # Polly *-generative voices have no speech marks → no lipsync.
-    # Force a Neural voice (which does emit visemes).
-    try:
-        furhat.set_voice(name="Isabelle-Neural")
-        print("Voice set: Isabelle-Neural")
-    except Exception as e:
-        print(f"set_voice failed: {e}")
+        sys.exit(f"Voice selection failed: {e}")
 
     # Test 0: gesture — does anything move at all?
     print("\n[Test 0] Gesture — does anything move?")
