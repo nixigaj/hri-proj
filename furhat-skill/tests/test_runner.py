@@ -26,7 +26,7 @@ def test_correct_url_for_each_turn(mock_dur):
     run_scenario(1, "rikssvenska", mock_furhat, BASE_URL, AUDIO_DIR,
                  input_fn=_make_inputs("", "", "", ""),
                  sleep_fn=lambda _: None)
-    called_urls = [c.kwargs["url"] for c in mock_furhat.say.call_args_list]
+    called_urls = [c.kwargs["url"].split("?")[0] for c in mock_furhat.say.call_args_list]
     assert called_urls == [
         f"{BASE_URL}/S1/rikssvenska/F1.wav",
         f"{BASE_URL}/S1/rikssvenska/F2.wav",
@@ -54,7 +54,7 @@ def test_fx_url_is_called_on_repeat(mock_dur):
     run_scenario(1, "tts", mock_furhat, BASE_URL, AUDIO_DIR,
                  input_fn=_make_inputs("r", "", "", "", ""),
                  sleep_fn=lambda _: None)
-    called_urls = [c.kwargs["url"] for c in mock_furhat.say.call_args_list]
+    called_urls = [c.kwargs["url"].split("?")[0] for c in mock_furhat.say.call_args_list]
     assert f"{BASE_URL}/S1/tts/FX.wav" in called_urls
 
 

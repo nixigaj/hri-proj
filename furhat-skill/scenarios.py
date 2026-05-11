@@ -25,5 +25,7 @@ SCENARIOS = {
 }
 
 
-def audio_url(base_url: str, scenario_id: int, voice: str, turn_id: str) -> str:
-    return f"{base_url}/S{scenario_id}/{voice}/{turn_id}.wav"
+def audio_url(base_url: str, scenario_id: int, voice: str, turn_id: str, cb: str = "") -> str:
+    # cb = cache-bust token. Furhat caches by URL — without this, replays prior content.
+    suffix = f"?cb={cb}" if cb else ""
+    return f"{base_url}/S{scenario_id}/{voice}/{turn_id}.wav{suffix}"

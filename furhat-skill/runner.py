@@ -46,21 +46,27 @@ def run_scenario(
 
     furhat.attend(user="CLOSEST")
 
+    session_cb = str(int(time.time()))
+
     for turn_id in scenario["turns"]:
         wav_path = os.path.join(audio_dir, f"S{scenario_id}", voice, f"{turn_id}.wav")
-        url = audio_url(audio_base_url, scenario_id, voice, turn_id)
+        url = audio_url(audio_base_url, scenario_id, voice, turn_id, cb=session_cb)
         print(f"  [{turn_id}] Playing...")
         furhat.gesture(name="Nod", blocking=False)
         _say_blocking(furhat, url, wav_path, sleep_fn)
 
         if turn_id in menu_turns:
+            repeat_n = 0
             while True:
                 cmd = input_fn("  > Enter=advance, r=repeat: ").strip().lower()
                 if cmd == "r":
+                    repeat_n += 1
+                    repeat_cb = f"{session_cb}-{turn_id}-{repeat_n}"
                     fx_path = os.path.join(audio_dir, f"S{scenario_id}", voice, "FX.wav")
-                    fx_url = audio_url(audio_base_url, scenario_id, voice, "FX")
+                    fx_url = audio_url(audio_base_url, scenario_id, voice, "FX", cb=repeat_cb)
+                    repeat_url = audio_url(audio_base_url, scenario_id, voice, turn_id, cb=f"{repeat_cb}-r")
                     _say_blocking(furhat, fx_url, fx_path, sleep_fn)
-                    _say_blocking(furhat, url, wav_path, sleep_fn)
+                    _say_blocking(furhat, repeat_url, wav_path, sleep_fn)
                 elif cmd == "":
                     break
                 else:

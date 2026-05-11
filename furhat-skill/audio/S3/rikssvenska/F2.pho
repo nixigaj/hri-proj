@@ -1,0 +1,311 @@
+{
+  "class": "iristk.speech.Transcription",
+  "phones": [
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 0.0,
+      "end": 0.14
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 0.14,
+      "end": 0.18
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʉː",
+      "start": 0.18,
+      "end": 0.21
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʋ",
+      "start": 0.21,
+      "end": 0.27
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɪ",
+      "start": 0.27,
+      "end": 0.3
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l̪",
+      "start": 0.3,
+      "end": 0.34
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "j",
+      "start": 0.34,
+      "end": 0.4
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "øː",
+      "start": 0.4,
+      "end": 0.53
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 0.53,
+      "end": 0.54
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 0.54,
+      "end": 0.62
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 0.62,
+      "end": 0.65
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n̪",
+      "start": 0.65,
+      "end": 0.7
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "spn",
+      "start": 0.7,
+      "end": 1.3
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 1.3,
+      "end": 1.69
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʋ",
+      "start": 1.69,
+      "end": 1.75
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɑː",
+      "start": 1.75,
+      "end": 1.78
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 1.78,
+      "end": 1.81
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "j",
+      "start": 1.81,
+      "end": 1.88
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 1.88,
+      "end": 1.96
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l̪",
+      "start": 1.96,
+      "end": 2.02
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 2.02,
+      "end": 2.09
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 2.09,
+      "end": 2.1
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "spn",
+      "start": 2.1,
+      "end": 2.91
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 2.91,
+      "end": 3.18
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 3.18,
+      "end": 3.21
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 3.21,
+      "end": 3.26
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "f",
+      "start": 3.26,
+      "end": 3.34
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 3.34,
+      "end": 3.41
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 3.41,
+      "end": 3.48
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪",
+      "start": 3.48,
+      "end": 3.57
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "p",
+      "start": 3.57,
+      "end": 3.62
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 3.62,
+      "end": 3.66
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʊ",
+      "start": 3.66,
+      "end": 3.67
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 3.67,
+      "end": 3.73
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʉː",
+      "start": 3.73,
+      "end": 3.82
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 3.82,
+      "end": 3.94
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪",
+      "start": 3.94,
+      "end": 3.99
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 3.99,
+      "end": 4.05
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l̪",
+      "start": 4.05,
+      "end": 4.1
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 4.1,
+      "end": 4.14
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 4.14,
+      "end": 4.15
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "f",
+      "start": 4.15,
+      "end": 4.24
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 4.24,
+      "end": 4.36
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l̪",
+      "start": 4.36,
+      "end": 4.42
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a˧˩",
+      "start": 4.42,
+      "end": 4.49
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʈ",
+      "start": 4.49,
+      "end": 4.58
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "iː˥˩",
+      "start": 4.58,
+      "end": 4.65
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 4.65,
+      "end": 4.8
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "eː",
+      "start": 4.8,
+      "end": 4.88
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "l̪",
+      "start": 4.88,
+      "end": 4.93
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 4.93,
+      "end": 5.357
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "class": "iristk.speech.Transcription",
+  "phones": [
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 0.0,
+      "end": 0.11
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪ʰ",
+      "start": 0.11,
+      "end": 0.17
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 0.17,
+      "end": 0.26
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 0.26,
+      "end": 0.3
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "f",
+      "start": 0.3,
+      "end": 0.35
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "øː",
+      "start": 0.35,
+      "end": 0.39
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 0.39,
+      "end": 0.4
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a",
+      "start": 0.4,
+      "end": 0.43
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪",
+      "start": 0.43,
+      "end": 0.47
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 0.47,
+      "end": 0.51
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ʉː",
+      "start": 0.51,
+      "end": 0.57
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "kʰ",
+      "start": 0.57,
+      "end": 0.65
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɔ",
+      "start": 0.65,
+      "end": 0.7
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n̪",
+      "start": 0.7,
+      "end": 0.76
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪",
+      "start": 0.76,
+      "end": 0.81
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "a˥˩",
+      "start": 0.81,
+      "end": 0.91
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "k",
+      "start": 0.91,
+      "end": 0.98
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "t̪",
+      "start": 0.98,
+      "end": 1.03
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɑː",
+      "start": 1.03,
+      "end": 1.09
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 1.09,
+      "end": 1.12
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 1.12,
+      "end": 1.15
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɔ",
+      "start": 1.15,
+      "end": 1.25
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "s̪",
+      "start": 1.25,
+      "end": 1.41
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "h",
+      "start": 1.41,
+      "end": 1.51
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "oː",
+      "start": 1.51,
+      "end": 1.52
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɑː",
+      "start": 1.52,
+      "end": 1.55
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɛ",
+      "start": 1.55,
+      "end": 1.58
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "n̪",
+      "start": 1.58,
+      "end": 1.62
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "b",
+      "start": 1.62,
+      "end": 1.66
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "r",
+      "start": 1.66,
+      "end": 1.73
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɑː",
+      "start": 1.73,
+      "end": 1.77
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "d̪",
+      "start": 1.77,
+      "end": 1.81
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɑː",
+      "start": 1.81,
+      "end": 1.87
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "ɡ",
+      "start": 1.87,
+      "end": 1.94
+    },
+    {
+      "class": "iristk.speech.Phone",
+      "name": "_s",
+      "start": 1.94,
+      "end": 2.299
+    }
+  ]
+}

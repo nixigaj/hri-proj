@@ -37,31 +37,31 @@ VOICES = ["tts", "rikssvenska", "skanska"]
 
 TRANSCRIPTS: dict[int, dict[str, str]] = {
     1: {
-        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Tryck ett för retur, två för orderfråga, eller tre för annat ärende.",
-        "F2": "Du vill göra en retur. Vad gäller returen, fel storlek eller fel produkt? Tryck ett för fel storlek, eller två för fel produkt.",
-        "F3": "Tack. Jag ser ditt senaste köp, ett par skor från order fyra åtta två sju. Stämmer det? Tryck ett för ja, eller två för nej.",
+        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Du kan säga retur, orderfråga, eller annat ärende.",
+        "F2": "Du vill göra en retur. Vad gäller returen, fel storlek eller fel produkt?",
+        "F3": "Tack. Jag ser ditt senaste köp, ett par skor från order fyra åtta två sju. Stämmer det?",
         "F4": "Tack. Jag skickar nu en returetikett till din epost. Skorna ska returneras inom fjorton dagar och pengarna återbetalas inom fem bankdagar.",
-        "F5": "Är det något mer jag kan hjälpa dig med? Tryck ett för ja, eller två för nej.",
+        "F5": "Är det något mer jag kan hjälpa dig med?",
         "F6": "Tack för att du kontaktade oss. Ha en bra dag.",
-        "FX": "Förlåt, jag uppfattade inte. Var god försök igen.",
+        "FX": "Förlåt, jag uppfattade inte. Kan du upprepa?",
     },
     2: {
-        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Tryck ett för retur, två för orderfråga, eller tre för annat ärende.",
-        "F2": "Du vill ställa en fråga om din order. Vad gäller frågan, leveransstatus eller ändring av beställning? Tryck ett för leveransstatus, eller två för ändring.",
-        "F3": "Tack. Jag ser ditt senaste köp, en bordslampa från order fem ett nio tre. Stämmer det? Tryck ett för ja, eller två för nej.",
+        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Du kan säga retur, orderfråga, eller annat ärende.",
+        "F2": "Du vill ställa en fråga om din order. Vad gäller frågan, leveransstatus eller ändring av beställning?",
+        "F3": "Tack. Jag ser ditt senaste köp, en bordslampa från order fem ett nio tre. Stämmer det?",
         "F4": "Tack. Ditt paket är försenat med två dagar och förväntas levereras på fredag. Som kompensation skickas en rabattkod på tio procent till din epost.",
-        "F5": "Är det något mer jag kan hjälpa dig med? Tryck ett för ja, eller två för nej.",
+        "F5": "Är det något mer jag kan hjälpa dig med?",
         "F6": "Tack för att du kontaktade oss. Ha en bra dag.",
-        "FX": "Förlåt, jag uppfattade inte. Var god försök igen.",
+        "FX": "Förlåt, jag uppfattade inte. Kan du upprepa?",
     },
     3: {
-        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Tryck ett för reklamation, två för orderfråga, eller tre för annat ärende.",
-        "F2": "Du vill göra en reklamation. Vad gäller reklamationen, defekt produkt eller fel artikel? Tryck ett för defekt produkt, eller två för fel artikel.",
-        "F3": "Tack. Jag ser ditt senaste köp, en vattenkokare från order sex fyra sju ett. Stämmer det? Tryck ett för ja, eller två för nej.",
+        "F1": "Hej och välkommen till kundtjänst. Vad kan jag hjälpa dig med idag? Du kan säga reklamation, orderfråga, eller annat ärende.",
+        "F2": "Du vill göra en reklamation. Vad gäller reklamationen, defekt produkt eller fel artikel?",
+        "F3": "Tack. Jag ser ditt senaste köp, en vattenkokare från order sex fyra sju ett. Stämmer det?",
         "F4": "Tack. Jag skickar nu en ny vattenkokare till dig samt en hämtetikett för den defekta produkten. Allt skickas till din epost.",
-        "F5": "Är det något mer jag kan hjälpa dig med? Tryck ett för ja, eller två för nej.",
+        "F5": "Är det något mer jag kan hjälpa dig med?",
         "F6": "Tack för att du kontaktade oss. Ha en bra dag.",
-        "FX": "Förlåt, jag uppfattade inte. Var god försök igen.",
+        "FX": "Förlåt, jag uppfattade inte. Kan du upprepa?",
     },
 }
 
@@ -127,7 +127,7 @@ def parse_phones_tier(tg_text: str) -> list[dict]:
 
     Furhat .pho format: start/end in seconds, silence labelled "_s".
     """
-    m = re.search(r'name = "phones"\s+intervals: size = \d+(.*?)(?=item \[|\Z)', tg_text, re.DOTALL)
+    m = re.search(r'name = "phones".*?intervals: size = \d+(.*?)(?=item \[|\Z)', tg_text, re.DOTALL)
     if not m:
         raise ValueError("No 'phones' tier found in TextGrid")
 
