@@ -3,9 +3,38 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 import seaborn as sns
+import sys
+import os
+
+# Get data type from command line argument or default to real
+if len(sys.argv) > 1:
+    data_type = sys.argv[1].lower()
+else:
+    data_type = "real"
+
+if data_type not in ["real", "dummy"]:
+    print(f"Error: Invalid data type '{data_type}'. Use 'real' or 'dummy'")
+    sys.exit(1)
+
+# Set directories and files
+output_dir = f"output_{data_type}"
+input_file = f"{output_dir}/responses_cleaned_{data_type}.csv"
+
+# Create output directory if it doesn't exist
+os.makedirs(output_dir, exist_ok=True)
+
+print(f"Analyzing {data_type.upper()} data")
+print(f"Input: {input_file}")
+print(f"Output directory: {output_dir}/")
+print()
+
+# Check if input file exists
+if not os.path.exists(input_file):
+    print(f"Error: {input_file} not found. Did you run handle_data.py {data_type} first?")
+    sys.exit(1)
 
 # Load cleaned responses and master list
-responses_df = pd.read_csv("responses_cleaned.csv")
+responses_df = pd.read_csv(input_file)
 master_df = pd.read_csv("master_list.csv")
 
 # Merge responses with master list metadata
@@ -142,8 +171,8 @@ for idx, question in enumerate(survey_questions):
     ax.grid(axis='y', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('boxplots_by_condition.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: boxplots_by_condition.png")
+plt.savefig(f'{output_dir}/boxplots_by_condition_{data_type}.png', dpi=300, bbox_inches='tight')
+print(f"✓ Saved: boxplots_by_condition_{data_type}.png")
 plt.close()
 
 # Heatmap of mean ratings by condition
@@ -155,8 +184,8 @@ ax.set_title('Mean Ratings by Condition', fontweight='bold', fontsize=14)
 ax.set_ylabel('Condition')
 ax.set_xlabel('Survey Question')
 plt.tight_layout()
-plt.savefig('heatmap_condition_means.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: heatmap_condition_means.png")
+plt.savefig(f'{output_dir}/heatmap_condition_means_{data_type}.png', dpi=300, bbox_inches='tight')
+print(f"✓ Saved: heatmap_condition_means_{data_type}.png")
 plt.close()
 
 # Heatmap by perceived dialect
@@ -168,8 +197,8 @@ ax.set_title('Mean Ratings by Perceived Dialect', fontweight='bold', fontsize=14
 ax.set_ylabel('Perceived Dialect')
 ax.set_xlabel('Survey Question')
 plt.tight_layout()
-plt.savefig('heatmap_perceived_dialect_means.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: heatmap_perceived_dialect_means.png")
+plt.savefig(f'{output_dir}/heatmap_perceived_dialect_means_{data_type}.png', dpi=300, bbox_inches='tight')
+print(f"✓ Saved: heatmap_perceived_dialect_means_{data_type}.png")
 plt.close()
 
 # Distribution plots for each question
@@ -182,8 +211,8 @@ for idx, question in enumerate(survey_questions):
     axes[idx].set_xlim(0, 6)
 
 plt.tight_layout()
-plt.savefig('distribution_all_questions.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: distribution_all_questions.png")
+plt.savefig(f'{output_dir}/distribution_all_questions_{data_type}.png', dpi=300, bbox_inches='tight')
+print(f"✓ Saved: distribution_all_questions_{data_type}.png")
 plt.close()
 
 # Violin plots for better distribution visualization by condition
@@ -201,11 +230,11 @@ for idx, question in enumerate(survey_questions):
     ax.set_ylim(0, 6)
 
 plt.tight_layout()
-plt.savefig('violin_plots_by_condition.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: violin_plots_by_condition.png")
+plt.savefig(f'{output_dir}/violin_plots_by_condition_{data_type}.png', dpi=300, bbox_inches='tight')
+print(f"✓ Saved: violin_plots_by_condition_{data_type}.png")
 plt.close()
 
 # Save merged data for further analysis
-merged_df.to_csv("responses_merged.csv", index=False)
-print("\n✓ Merged data saved to responses_merged.csv")
+merged_df.to_csv(f"{output_dir}/responses_merged_{data_type}.csv", index=False)
+print(f"\n✓ Merged data saved to responses_merged_{data_type}.csv")
 print("\nAnalysis complete!")

@@ -1,0 +1,28 @@
+participant_id,group,scenario,condition,trustworthiness,competence,likeability,warmth,interact_again,percieved_dialect,home_region,dialectal_background,age,gender,previous_experience
+T18,g3,s3,c1,3,2,3,4,3,uppsaladialekt,r,uppsaladialekt,3,kvinna,3
+T17,g3,s2,c3,3,5,2,5,4,värmländska,r,r,3,kvinna,3
+T16,g3,s1,c2,4,3,5,3,3,r,k,norrländska,2,kvinna,3
+T15,g3,s3,c2,5,2,4,3,4,r,d,värmländska,5,annat,4
+T14,g3,s2,c1,4,5,2,5,3,syntetisk/tts-röst,e,dalmål,3,vill ej svara,3
+T13,g3,s1,c3,5,4,2,3,4,uppsaladialekt,sa,r,3,man,2
+T12,g3,s3,c3,5,3,2,5,3,östgötska,f,ingen specifik dialekt,2,annat,4
+T11,g3,s2,c2,5,3,2,4,3,dalmål,s,uppsaladialekt,34,annat,3
+T10,g3,s1,c1,5,2,4,3,4,syntetisk/tts-röst,g,östgötska,5,man,2
+T15,g2,s2,c1,4,2,4,5,2,östgötska,f,rikssvenska,3,man,2
+T15,g2,s1,c3,2,4,3,2,4,norrländska,f,småländska,2,man,2
+T14,g2,s3,c2,1,3,2,2,4,rikssvenska,w,småländska,5,man,3
+T14,g2,s1,c3,5,5,5,3,3,värmländska,g,rikssvenska,35,annat,3
+T13,g2,s3,c2,4,2,4,3,2,stockholmsdialekt,s,uppsaladialekt,6,man,3
+T13,g2,s2,c1,1,4,4,3,3,ingen specifik dialekt,f,östgötska,8,annat,3
+T12,g1,s2,c2,4,2,5,3,4,gotländska,j,uppsaladialekt,7,annat,3
+T12,g1,s1,c1,5,3,2,4,3,stockholmsdialekt,s,värmländska,4,annat,2
+T11,g1,s3,c3,2,5,3,4,3,rikssvenska,d,västgötska,4,man,3
+T11,g1,s1,c1,2,5,2,3,2,norrländska,f,uppsaladialekt,2,man,4
+T10,g1,s3,c3,2,5,3,3,3,västgötska,b,rikssvenska,3,man,3
+T10,g1,s2,c2,3,4,2,3,2,skånsk,hj,östgötska,5,kvinna,3
+T18,g3,s2,c3,4,3,5,3,2,ingen specifik dialekt,g,dalmål,4,man,4
+T18,g3,s1,c2,3,5,4,5,4,uppsaladialekt,hd,ingen specifik dialekt,56,annat,2
+T17,g3,s3,c1,4,1,4,4,4,uppsaladialekt,a,skånsk,52,man,4
+T17,g3,s1,c2,3,4,2,5,3,vet ej,se,skånsk,5,annat,4
+T16,g3,s3,c1,3,4,2,4,3,östgötska,g,småländska,5,man,3
+T16,g3,s2,c3,4,2,5,5,4,småländska,h,gotländska,4,man,3

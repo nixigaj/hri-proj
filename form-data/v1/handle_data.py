@@ -1,7 +1,36 @@
 import pandas as pd
-import numpy as np
+import sys
+import os
 
-df = pd.read_csv("responses_raw.csv")
+# Get data type from command line argument or default to real
+if len(sys.argv) > 1:
+    data_type = sys.argv[1].lower()
+else:
+    data_type = "real"
+
+if data_type not in ["real", "dummy"]:
+    print(f"Error: Invalid data type '{data_type}'. Use 'real' or 'dummy'")
+    sys.exit(1)
+
+# Set file names and directories
+input_file = f"responses_raw.csv" if data_type == "real" else "dummy_responses_raw.csv"
+output_dir = f"output_{data_type}"
+output_file = f"{output_dir}/responses_cleaned_{data_type}.csv"
+
+# Create output directory if it doesn't exist
+os.makedirs(output_dir, exist_ok=True)
+
+print(f"Processing {data_type.upper()} data")
+print(f"Input: {input_file}")
+print(f"Output directory: {output_dir}/")
+print()
+
+# Check if input file exists
+if not os.path.exists(input_file):
+    print(f"Error: {input_file} not found")
+    sys.exit(1)
+
+df = pd.read_csv(input_file)
 master_df = pd.read_csv("master_list.csv")
 
 # Drop timestamp columns
@@ -90,5 +119,5 @@ print(f"Participants: {df['participant_id'].nunique()}")
 print(f"\nData types:")
 print(df.dtypes)
 
-df.to_csv("responses_cleaned.csv", index=False)
-print("\n✓ Cleaned data saved to responses_cleaned.csv")
+df.to_csv(output_file, index=False)
+print(f"\n✓ Cleaned data saved to {output_file}")
