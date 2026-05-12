@@ -11,6 +11,7 @@ read as speech; not visually perfect.
 from __future__ import annotations
 
 import json
+import os
 import threading
 import time
 from pathlib import Path
@@ -18,7 +19,12 @@ from pathlib import Path
 import websocket  # from websocket-client
 
 
-REALTIME_WS_URL = "ws://localhost:9000/v1/events"
+def _default_ws_url() -> str:
+    host = os.environ.get("FURHAT_HOST", "localhost")
+    return f"ws://{host}:9000/v1/events"
+
+
+REALTIME_WS_URL = _default_ws_url()
 
 # Coarse phoneme → jaw opening amplitude (0..1).
 # Covers espeak (Kirshenbaum) and MFA-Swedish (IPA-ish) labels.
@@ -110,10 +116,10 @@ def _send_face_params(ws: websocket.WebSocket, jaw_open: float) -> None:
 class LipsyncPlayer:
     """Plays a .pho timeline against the Furhat realtime WebSocket in a thread."""
 
-    def __init__(self, pho_path: Path, ws_url: str = REALTIME_WS_URL, fps: int = 50,
+    def __init__(self, pho_path: Path, ws_url: str | None = None, fps: int = 50,
                  start_delay_s: float = 0.0):
         self.frames = _build_frames(load_pho(pho_path), fps=fps)
-        self.ws_url = ws_url
+        self.ws_url = ws_url if ws_url is not None else _default_ws_url()
         self.start_delay_s = start_delay_s
         self._thread: threading.Thread | None = None
         self._stop = threading.Event()

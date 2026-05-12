@@ -16,6 +16,13 @@ def parse_args():
     parser.add_argument("--voice", type=str, required=True,
                         choices=["tts", "rikssvenska", "skanska"],
                         help="Voice condition")
+    parser.add_argument("--furhat-host", type=str,
+                        default=os.environ.get("FURHAT_HOST", "localhost"),
+                        help="Furhat Remote API host (default: $FURHAT_HOST or localhost)")
+    parser.add_argument("--audio-host", type=str,
+                        default=os.environ.get("AUDIO_HOST"),
+                        help="Host to advertise audio URLs as. Default: 'localhost' "
+                             "if --furhat-host is localhost, else auto-detect LAN IP.")
     return parser.parse_args()
 
 
@@ -36,19 +43,28 @@ def preflight_check(scenario_id: int, voice: str, audio_dir: str) -> None:
 
 def main():
     args = parse_args()
+    # Propagate so lipsync_driver picks the right WebSocket host.
+    os.environ["FURHAT_HOST"] = args.furhat_host
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     audio_dir = os.path.join(script_dir, "audio")
 
     preflight_check(args.scenario, args.voice, audio_dir)
 
-    audio_base_url = start_audio_server(audio_dir, port=8000)
+    if args.audio_host:
+        advertise = args.audio_host
+    else:
+        advertise = "localhost" if args.furhat_host == "localhost" else "auto"
+    audio_base_url = start_audio_server(audio_dir, port=8000,
+                                        advertise_host=advertise,
+                                        reach_host=args.furhat_host)
+    print(f"[audio-server] serving at {audio_base_url}")
 
     try:
-        furhat = FurhatRemoteAPI("localhost")
+        furhat = FurhatRemoteAPI(args.furhat_host)
         furhat.furhat_get()  # probe: raises if Remote API not reachable (port 54321)
     except Exception as e:
-        print(f"Could not connect to Furhat Launcher: {e}")
+        print(f"Could not connect to Furhat Launcher at {args.furhat_host}: {e}")
         print("Ensure the Furhat Launcher is running and the virtual robot is started.")
         sys.exit(1)
 

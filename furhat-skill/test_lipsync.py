@@ -33,11 +33,12 @@ def main():
     print(f"Serving: {wav_url}")
     print(f"Furhat will fetch .pho from: {base_url}/sound_16k.pho?cb={cb}")
 
+    host = os.environ.get("FURHAT_HOST", "localhost")
     try:
-        furhat = FurhatRemoteAPI("localhost")
+        furhat = FurhatRemoteAPI(host)
         furhat.furhat_get()
     except Exception as e:
-        sys.exit(f"Cannot connect to Furhat: {e}")
+        sys.exit(f"Cannot connect to Furhat at {host}: {e}")
 
     # Pick first available voice. Prefer Neural (emits visemes for lipsync);
     # *-generative voices have no speech marks.
