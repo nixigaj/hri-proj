@@ -83,6 +83,36 @@ def test_say_called_non_blocking_with_lipsync(mock_dur):
 
 
 @patch("runner._wav_duration", return_value=0.0)
+def test_plain_repeat_replays_turn_without_fx(mock_dur):
+    mock_furhat = Mock()
+    # p on F1, then Enter for F2, F3, F5
+    run_scenario(1, "tts", mock_furhat, BASE_URL, AUDIO_DIR,
+                 input_fn=_make_inputs("p", "", "", "", ""),
+                 sleep_fn=lambda _: None)
+    called_urls = [c.kwargs["url"].split("?")[0] for c in mock_furhat.say.call_args_list]
+    # Expected: F1, F1 (plain replay, no FX), F2, F3, F4, F5, F6 = 7 calls
+    assert mock_furhat.say.call_count == 7
+    assert f"{BASE_URL}/S1/tts/FX.wav" not in called_urls
+    assert called_urls[0] == f"{BASE_URL}/S1/tts/F1.wav"
+    assert called_urls[1] == f"{BASE_URL}/S1/tts/F1.wav"
+
+
+@patch("runner._wav_duration", return_value=0.0)
+def test_fx_only_plays_fx_without_repeat(mock_dur):
+    mock_furhat = Mock()
+    # f on F1, then Enter for F2, F3, F5
+    run_scenario(1, "tts", mock_furhat, BASE_URL, AUDIO_DIR,
+                 input_fn=_make_inputs("f", "", "", "", ""),
+                 sleep_fn=lambda _: None)
+    called_urls = [c.kwargs["url"].split("?")[0] for c in mock_furhat.say.call_args_list]
+    # Expected: F1, FX (no replay), F2, F3, F4, F5, F6 = 7 calls
+    assert mock_furhat.say.call_count == 7
+    assert called_urls[0] == f"{BASE_URL}/S1/tts/F1.wav"
+    assert called_urls[1] == f"{BASE_URL}/S1/tts/FX.wav"
+    assert called_urls[2] == f"{BASE_URL}/S1/tts/F2.wav"
+
+
+@patch("runner._wav_duration", return_value=0.0)
 def test_scenario_2_uses_correct_scenario_id_in_url(mock_dur):
     mock_furhat = Mock()
     run_scenario(2, "skanska", mock_furhat, BASE_URL, AUDIO_DIR,
