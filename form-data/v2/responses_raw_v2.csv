@@ -1,0 +1,16 @@
+Tidstämpel,participant_id,group,1. 1 - Hur pålitlig upplevde du roboten?,1.2 - Hur kompetent upplevde du roboten?,1.3 - Hur sympatisk upplevde du roboten?,1.4 - Hur varm/uppmuntrande upplevde du roboten?,1.5 - Hur troligt är att du skulle vilja interagera med denna robot igen?,2. 1 - Hur pålitlig upplevde du roboten?,2.2 - Hur kompetent upplevde du roboten?,2.3 - Hur sympatisk upplevde du roboten?,2.4 - Hur varm/uppmuntrande upplevde du roboten?,2.5 - Hur troligt är att du skulle vilja interagera med denna robot igen?,3. 1 - Hur pålitlig upplevde du roboten?,3.2 - Hur kompetent upplevde du roboten?,3.3 - Hur sympatisk upplevde du roboten?,3.4 - Hur varm/uppmuntrande upplevde du roboten?,3.5 - Hur troligt är att du skulle vilja interagera med denna robot igen?,1 - Vilken dialekt upplevde du att roboten hade i Scenario 1?,2 - Vilken dialekt upplevde du att roboten hade i Scenario 2?,3 - Vilken dialekt upplevde du att roboten hade i Scenario 3?,Vad anser du vara din hemregion?,Vad anser du dig ha för dialektal bakgrund?,Vad är din ålder?,Vilket kön har du?,Vad har du för tidigare erfarenhet av att interagera med röstrobotar?
+2026-05-14 10.26.22,P01,g1,2,2,1,4,2,1,1,4,4,2,4,5,5,5,4,Syntetisk/TTS-röst,Ingen specifik dialekt,Skånsk,uppsala,Uppsaladialekt,21,Man,3
+2026-05-14 10.42.13,P02,g1,4,5,4,4,5,3,4,2,3,3,5,5,5,4,5,Ingen specifik dialekt,Ingen specifik dialekt,Skånsk,"småland, växjö",Småländska,19,Kvinna,4
+2026-05-14 10.54.14,P03,g1,5,5,4,4,5,5,5,5,5,5,5,5,5,4,5,Syntetisk/TTS-röst,Rikssvenska,Skånsk,Uppsala,Uppsaladialekt,29,Man,2
+2026-05-14 11.14.45,P04,g2,4,5,2,3,5,4,4,2,1,1,5,5,3,2,3,Skånsk,Syntetisk/TTS-röst,Stockholmsdialekt,uppsala,Uppsaladialekt,25,Man,1
+2026-05-14 11.23.55,P05,g2,4,3,2,3,3,4,4,4,4,4,4,4,4,3,4,Syntetisk/TTS-röst,Vet ej,Värmländska,Stockholm,Stockholmsdialekt,20,Kvinna,3
+2026-05-14 11.34.09,P06,g2,4,5,3,4,4,5,4,2,2,4,4,4,3,4,5,Skånsk,Vet ej,Rikssvenska,stockholm,Stockholmsdialekt,23,Man,1
+2026-05-14 11.45.58,P07,g3,3,3,2,2,1,2,2,3,3,1,1,1,1,1,1,Rikssvenska,Skånsk,Syntetisk/TTS-röst,Uppland,Uppsaladialekt,19,Man,2
+2026-05-14 11.57.37,P08,g3,4,5,3,2,4,5,5,5,5,5,3,4,1,1,1,Stockholmsdialekt,Skånsk,Syntetisk/TTS-röst,Stockholm,Stockholmsdialekt,20,Kvinna,2
+2026-05-14 12.10.28,P09,g3,4,3,4,4,4,2,3,5,4,5,2,4,2,2,3,Rikssvenska,Skånsk,Syntetisk/TTS-röst,Uppland,Rikssvenska,27,Man,2
+2026-05-14 13.23.32,P10,g1,4,4,2,3,2,4,5,3,4,4,3,3,4,4,3,Syntetisk/TTS-röst,Rikssvenska,Skånsk,Södermanland,Ingen specifik dialekt,19,Kvinna,3
+2026-05-14 13.36.33,P11,g2,5,5,3,4,4,4,4,2,1,3,5,4,3,4,5,Skånsk,Syntetisk/TTS-röst,Rikssvenska,stockholm,Rikssvenska,24,Man,3
+2026-05-14 13.52.36,P12,g3,5,3,3,3,4,4,4,2,2,2,2,3,1,1,2,Stockholmsdialekt,Vet ej,Syntetisk/TTS-röst,Uppsala,Stockholmsdialekt,22,Kvinna,3
+2026-05-14 14.05.42,P13,g1,4,4,1,2,3,4,4,2,1,4,2,2,3,4,2,Syntetisk/TTS-röst,Rikssvenska,Skånsk,Stockholm,Rikssvenska,21,Kvinna,1
+2026-05-14 14.19.58,P14,g2,5,5,4,4,4,5,5,3,2,4,5,4,5,5,4,Syntetisk/TTS-röst,Syntetisk/TTS-röst,Rikssvenska,Dalarna,Dalmål,20,Kvinna,2
+2026-05-14 14.27.49,P15,g3,4,5,4,3,4,4,5,4,3,4,2,3,2,2,2,Ingen specifik dialekt,Skånsk,Syntetisk/TTS-röst,jämtland,Norrländska,23,Kvinna,2
