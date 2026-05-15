@@ -159,6 +159,13 @@ print("\n" + "="*60)
 print("GENERATING VISUALIZATIONS")
 print("="*60)
 
+condition_label_map = {
+    'c1': 'TTS',
+    'c2': 'Rikssvenska',
+    'c3': 'Skånska',
+}
+merged_df['condition_label'] = merged_df['condition'].map(condition_label_map).fillna(merged_df['condition'])
+
 sns.set_style("whitegrid")
 fig, axes = plt.subplots(2, 3, figsize=(15, 10))
 fig.suptitle("Survey Responses by Condition", fontsize=16, fontweight='bold')
@@ -168,7 +175,7 @@ for idx, question in enumerate(survey_questions):
     col = idx % 3
     ax = axes[row, col]
 
-    sns.boxplot(data=merged_df, x='condition', y=question, ax=ax, palette='Set2')
+    sns.boxplot(data=merged_df, x='condition_label', y=question, ax=ax, palette='Set2')
     ax.set_title(question.replace('_', ' ').title(), fontweight='bold')
     ax.set_ylabel('Rating')
     ax.set_ylim(0, 6)
@@ -181,7 +188,7 @@ plt.close()
 
 # Heatmap of mean ratings by condition
 fig, ax = plt.subplots(figsize=(10, 4))
-condition_means = merged_df.groupby('condition')[survey_questions].mean()
+condition_means = merged_df.groupby('condition_label')[survey_questions].mean()
 sns.heatmap(condition_means, annot=True, fmt='.2f', cmap='RdYlGn',
             vmin=1, vmax=5, cbar_kws={'label': 'Mean Rating'}, ax=ax)
 ax.set_title('Mean Ratings by Condition', fontweight='bold', fontsize=14)
@@ -228,7 +235,7 @@ for idx, question in enumerate(survey_questions):
     col = idx % 3
     ax = axes[row, col]
 
-    sns.violinplot(data=merged_df, x='condition', y=question, ax=ax, palette='muted')
+    sns.violinplot(data=merged_df, x='condition_label', y=question, ax=ax, palette='muted')
     ax.set_title(question.replace('_', ' ').title(), fontweight='bold')
     ax.set_ylabel('Rating')
     ax.set_ylim(0, 6)

@@ -29,18 +29,18 @@ P12,g3,s2,4,4,2,2,2,vet ej,uppsala,stockholmsdialekt,22,kvinna,3,c1,skånska (c3
 P13,g1,s2,4,4,2,1,4,rikssvenska,stockholm,rikssvenska,21,kvinna,1,c3,skånska (c3)
 P14,g2,s2,5,5,3,2,4,syntetisk/tts-röst,dalarna,dalmål,20,kvinna,2,c2,rikssvenska (c2)
 P15,g3,s2,4,5,4,3,4,skånsk,jämtland,norrländska,23,kvinna,2,c1,skånska (c3)
-P01,g1,s3,4,5,5,5,4,skånsk,uppsala,uppsaladialekt,21,man,3,,
-P02,g1,s3,5,5,5,4,5,skånsk,"småland, växjö",småländska,19,kvinna,4,,
-P03,g1,s3,5,5,5,4,5,skånsk,uppsala,uppsaladialekt,29,man,2,,
-P04,g2,s3,5,5,3,2,3,stockholmsdialekt,uppsala,uppsaladialekt,25,man,1,,
-P05,g2,s3,4,4,4,3,4,värmländska,stockholm,stockholmsdialekt,20,kvinna,3,,
-P06,g2,s3,4,4,3,4,5,rikssvenska,stockholm,stockholmsdialekt,23,man,1,,
-P07,g3,s3,1,1,1,1,1,syntetisk/tts-röst,uppland,uppsaladialekt,19,man,2,,
-P08,g3,s3,3,4,1,1,1,syntetisk/tts-röst,stockholm,stockholmsdialekt,20,kvinna,2,,
-P09,g3,s3,2,4,2,2,3,syntetisk/tts-röst,uppland,rikssvenska,27,man,2,,
-P10,g1,s3,3,3,4,4,3,skånsk,södermanland,ingen specifik dialekt,19,kvinna,3,,
-P11,g2,s3,5,4,3,4,5,rikssvenska,stockholm,rikssvenska,24,man,3,,
-P12,g3,s3,2,3,1,1,2,syntetisk/tts-röst,uppsala,stockholmsdialekt,22,kvinna,3,,
-P13,g1,s3,2,2,3,4,2,skånsk,stockholm,rikssvenska,21,kvinna,1,,
-P14,g2,s3,5,4,5,5,4,rikssvenska,dalarna,dalmål,20,kvinna,2,,
-P15,g3,s3,2,3,2,2,2,syntetisk/tts-röst,jämtland,norrländska,23,kvinna,2,,
+P01,g1,s3,4,5,5,5,4,skånsk,uppsala,uppsaladialekt,21,man,3,c3,skånska (c3)
+P02,g1,s3,5,5,5,4,5,skånsk,"småland, växjö",småländska,19,kvinna,4,c3,skånska (c3)
+P03,g1,s3,5,5,5,4,5,skånsk,uppsala,uppsaladialekt,29,man,2,c3,skånska (c3)
+P04,g2,s3,5,5,3,2,3,stockholmsdialekt,uppsala,uppsaladialekt,25,man,1,c2,rikssvenska (c2)
+P05,g2,s3,4,4,4,3,4,värmländska,stockholm,stockholmsdialekt,20,kvinna,3,c2,rikssvenska (c2)
+P06,g2,s3,4,4,3,4,5,rikssvenska,stockholm,stockholmsdialekt,23,man,1,c2,rikssvenska (c2)
+P07,g3,s3,1,1,1,1,1,syntetisk/tts-röst,uppland,uppsaladialekt,19,man,2,c1,tts (c1)
+P08,g3,s3,3,4,1,1,1,syntetisk/tts-röst,stockholm,stockholmsdialekt,20,kvinna,2,c1,tts (c1)
+P09,g3,s3,2,4,2,2,3,syntetisk/tts-röst,uppland,rikssvenska,27,man,2,c1,tts (c1)
+P10,g1,s3,3,3,4,4,3,skånsk,södermanland,ingen specifik dialekt,19,kvinna,3,c3,skånska (c3)
+P11,g2,s3,5,4,3,4,5,rikssvenska,stockholm,rikssvenska,24,man,3,c2,rikssvenska (c2)
+P12,g3,s3,2,3,1,1,2,syntetisk/tts-röst,uppsala,stockholmsdialekt,22,kvinna,3,c1,tts (c1)
+P13,g1,s3,2,2,3,4,2,skånsk,stockholm,rikssvenska,21,kvinna,1,c3,skånska (c3)
+P14,g2,s3,5,4,5,5,4,rikssvenska,dalarna,dalmål,20,kvinna,2,c2,rikssvenska (c2)
+P15,g3,s3,2,3,2,2,2,syntetisk/tts-röst,jämtland,norrländska,23,kvinna,2,c1,tts (c1)
