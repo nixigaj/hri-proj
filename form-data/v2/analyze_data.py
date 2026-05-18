@@ -6,6 +6,8 @@ import seaborn as sns
 import sys
 import os
 import warnings
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
 
 # Suppress FutureWarnings from seaborn/matplotlib
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -135,6 +137,71 @@ for question in survey_questions:
     h_stat, p_value = stats.kruskal(*groups)
     print(f"{question}:")
     print(f"  H = {h_stat:.4f}, p = {p_value:.4f} {'✓ Significant' if p_value < 0.05 else '  Not significant'}")
+
+print("\n" + "="*60)
+print("REPEATED-MEASURES ANALYSIS (GEE)")
+print("="*60)
+
+# Ensure categorical variables
+merged_df["condition"] = merged_df["condition"].astype("category")
+merged_df["scenario"] = merged_df["scenario"].astype("category")
+merged_df["participant_id"] = merged_df["participant_id"].astype("category")
+
+# Optional:
+# Set reference categories
+merged_df["condition"] = merged_df["condition"].cat.reorder_categories(
+    ["c1", "c2", "c3"],
+    ordered=True
+)
+
+for question in survey_questions:
+
+    print(f"\n=== {question.upper()} ===")
+
+    try:
+        # GEE model with participant clustering
+        model = smf.gee(
+            f"{question} ~ C(condition) + C(scenario)",
+            groups="participant_id",
+            data=merged_df,
+            family=sm.families.Gaussian(),
+            cov_struct=sm.cov_struct.Exchangeable()
+        )
+
+        result = model.fit()
+
+        print(result.summary())
+
+    except Exception as e:
+        print(f"Error analyzing {question}: {e}")
+
+merged_df["overall_score"] = merged_df[survey_questions].mean(axis=1)
+try:
+    # GEE model with participant clustering
+    model = smf.gee(
+        f"{merged_df['overall_score'].name} ~ C(condition) + C(scenario)",
+        groups="participant_id",
+        data=merged_df,
+        family=sm.families.Gaussian(),
+        cov_struct=sm.cov_struct.Exchangeable()
+    )
+    result = model.fit()
+    print(result.summary())
+except Exception as e:
+    print(f"Error analyzing {merged_df['overall_score'].name}: {e}")
+
+def cronbach_alpha(df):
+    df_corr = df.corr()
+    n = len(df.columns)
+
+    mean_corr = df_corr.values[np.triu_indices(n, 1)].mean()
+
+    return (n * mean_corr) / (1 + (n - 1) * mean_corr)
+
+alpha = cronbach_alpha(merged_df[survey_questions])
+
+print("\n=== Cronbach's Alpha ===")
+print(f"Alpha: {alpha:.3f}")
 
 # Summary statistics for analysis
 print("\n=== Data Structure for Analysis ===")
